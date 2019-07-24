@@ -56,6 +56,7 @@ __EOF__
 
 # Targets to be built
 SOONG_BINARIES=(
+    "cxx_extractor"
     "header-abi-linker"
     "header-abi-dumper"
     "header-abi-diff"
