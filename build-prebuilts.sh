@@ -15,8 +15,8 @@
 # limitations under the License.
 
 export LLVM_BUILD_HOST_TOOLS=true
-export LLVM_PREBUILTS_VERSION=clang-r353983b
-export LLVM_RELEASE_VERSION=9.0.2
+export LLVM_PREBUILTS_VERSION=clang-r353983d
+export LLVM_RELEASE_VERSION=9.0.4
 
 # FIXME: Workaround to build bionic versioner in the aosp/clang-tools branch.
 export FORCE_BUILD_LLVM_COMPONENTS=true
@@ -56,6 +56,7 @@ __EOF__
 
 # Targets to be built
 SOONG_BINARIES=(
+    "cxx_extractor"
     "header-abi-linker"
     "header-abi-dumper"
     "header-abi-diff"
