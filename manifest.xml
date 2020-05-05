@@ -5,13 +5,13 @@
 
   <default remote="aosp" revision="master" />
 
-  <project name="platform/development" path="development" revision="066b315b2c86dd46e20cd07a47977b85c3f7ba3b" />
+  <project name="platform/development" path="development" revision="a0ba9fab45d867dc1cf9b2288477fb6db96d2bbd" />
 
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="4533a4d0efa68949dc3c0dfec00214feaddd6c7b" />
 
   <project name="platform/external/go-creachadair-stringset" path="external/go-creachadair-stringset" revision="580fe893c0cd9bc1cb41a735b6ff456901f00e83" />
 
-  <project name="platform/build/soong" path="build/soong" revision="6dfe30a5e2d5330c49e90ef2dfb2139ecdcd7a5f">
+  <project name="platform/build/soong" path="build/soong" revision="817133ee2ad00c0979befc98b20e616b1f4f9b2e">
     <linkfile dest="Android.bp" src="root.bp" />
 
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
@@ -31,11 +31,11 @@
 
   <project clone-depth="1" name="platform/prebuilts/build-tools" path="prebuilts/build-tools" revision="0d4cca5dee07031987d228ecee3b221eb919aa89" />
 
-  <project name="platform/bionic" path="bionic" revision="9e42d38e21800f76fc4d4aec6c2b56bfdad6db30" />
+  <project name="platform/bionic" path="bionic" revision="04e4d35cd74f9932c989df728f04251e4b906410" />
 
   <project clone-depth="1" groups="linux" name="platform/prebuilts/go/linux-x86" path="prebuilts/go/linux-x86" revision="3affa1d2632b48f9589ab4c91ca1b825d7c73a87" />
 
-  <project name="platform/external/zlib" path="external/zlib" revision="38881db65155e099d9ce40ad7cd634d83c4841b9" />
+  <project name="platform/external/zlib" path="external/zlib" revision="f6b51e7ac87b9d0ce1586caa1d82d8e2a64d3604" />
 
   <project name="platform/external/golang-x-tools" path="external/golang-x-tools" revision="bcc6484babb4e999e4bdb6a982bfa7e92fc640d2" />
 
@@ -45,7 +45,7 @@
 
   <project name="platform/external/kythe" path="external/kythe" revision="6ea343af44da3603e704fef9db392b24ee3b592f" />
 
-  <project name="platform/external/libcxx" path="external/libcxx" revision="2bdf5baf960c84c55fefba37866dd9b536aec679" />
+  <project name="platform/external/libcxx" path="external/libcxx" revision="f65f67c62279db77ec727b9fe59e90ae4c4cb6dc" />
 
   <project groups="pdk" name="platform/external/boringssl" path="external/boringssl" revision="30400e8dcf23efb5c0563f7121a0e43afe11c782" />
 
@@ -63,9 +63,9 @@
 
   <project name="platform/external/libunwind" path="external/libunwind" revision="96a62d4598f6833c95575eb07bd558f8a14a7dc5" />
 
-  <project name="platform/system/core" path="system/core" revision="13c6574139301825b9dcee9986f8f7685441aaef" />
+  <project name="platform/system/core" path="system/core" revision="f9273c2aa3d290b88163bbc7ba7f1e95e7c71020" />
 
-  <project clone-depth="1" groups="linux" name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="f71cc7fa68ac644595257d6fdebc2e543cb7041c" />
+  <project clone-depth="1" groups="linux" name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="70642ffab840f51e721b008bb7505704d680e985" />
 
   <project clone-depth="3" name="platform/prebuilts/clang-tools" path="prebuilts/clang-tools" revision="881a52803087ac26382a0eab2326234f41211826" />
 
@@ -89,13 +89,13 @@
 
   <project groups="pdk" name="platform/external/gflags" path="external/gflags" revision="01a8902949591fcecfb8e504c58336b300d20b99" />
 
-  <project name="platform/build" path="build/make" revision="1ae5abc46e9b5c1721ec725bd05c2a24d9c80479">
+  <project name="platform/build" path="build/make" revision="af4c62f78a0a2572ba828de6a51b28de37d0c3c6">
     <linkfile dest="build/tools" src="tools" />
 </project>
 
   <project clone-depth="1" name="platform/prebuilts/misc" path="prebuilts/misc" revision="b378fddc5826f348bc4b1797d6cb30345bf30d4c" />
 
-  <project clone-depth="1" groups="darwin" name="platform/prebuilts/clang/host/darwin-x86" path="prebuilts/clang/host/darwin-x86" revision="94eb81ab677985262c2ce2b18826bedaac7a7be4" />
+  <project clone-depth="1" groups="darwin" name="platform/prebuilts/clang/host/darwin-x86" path="prebuilts/clang/host/darwin-x86" revision="76e57fa0f69740e9c1e1bc01f652dfc35f19a694" />
 
   <project name="platform/external/protobuf" path="external/protobuf" revision="8ccc54a7945524c5f2a6845c0bef28f54a1bcd9f" />
 
