@@ -2,7 +2,7 @@ Prebuilts for Clang/LLVM-based tools used in Android
 ====================================================
 
 For the latest version of this doc, please make sure to visit:
-[Android Clang/LLVM-based Tools Readme Doc](https://android.googlesource.com/platform/prebuilts/clang-tools/README.md)
+[Android Clang/LLVM-based Tools Readme Doc](https://android.googlesource.com/platform/prebuilts/clang-tools/+/master/README.md)
 
 Build Instructions
 ------------------
