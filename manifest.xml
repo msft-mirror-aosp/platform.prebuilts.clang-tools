@@ -5,15 +5,15 @@
 
   <default revision="master" remote="aosp" sync-j="4" />
 
-  <project path="build/make" name="platform/build" revision="5a0cef1c00a80c1fa574560bb3ad9310925df6f4">
+  <project path="build/make" name="platform/build" revision="8fb2d83457badf54fcf1a47cafe04d83e3c69a21">
     <linkfile dest="build/tools" src="tools" />
 </project>
 
-  <project path="build/blueprint" name="platform/build/blueprint" revision="3a988df18ad2e4125601d5835d442374dc9eb71b" />
+  <project path="build/blueprint" name="platform/build/blueprint" revision="5ff5fe3e66cb0f030d736d7139dac0bcbfaa1781" />
 
   <project path="build/kati" name="platform/build/kati" revision="8f9c4437513b4a41dec451e1a313fa3a8e9b64d9" />
 
-  <project path="build/soong" name="platform/build/soong" revision="cd4335ae45c96332bd1124d602e1ded2a49bc7db">
+  <project path="build/soong" name="platform/build/soong" revision="a4fc08d20412d079d680f1a607cf6b102f97b2c8">
     <linkfile dest="Android.bp" src="root.bp" />
 
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
@@ -23,9 +23,9 @@
 
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" revision="68a6156110e8f65d42626a9310bc5590947c2ede" />
 
-  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="3" revision="41ba7b6ef7aa76b21e08f06fc3453241fea98117" />
+  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="3" revision="494f645c6555b6cd8b5dbc5fb4f3722210d994b8" />
 
-  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="linux" clone-depth="1" revision="8f3b6ebe3857a1ca054fb6c54df97267269968ad" />
+  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="linux" clone-depth="1" revision="30d629e68e274da8fd4d08c663d898ad54d087a3" />
 
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" clone-depth="1" revision="e089f0d72820a43be332be964643b83a32e4b1a7" />
 
@@ -53,9 +53,9 @@
 
   <project path="prebuilts/misc" name="platform/prebuilts/misc" clone-depth="1" revision="c32bb1c82e8ecf3dd4e88adba6c7d8523cf3eb8f" />
 
-  <project path="bionic" name="platform/bionic" revision="78051b771be586268221d5f8485525d0a7a49fe2" />
+  <project path="bionic" name="platform/bionic" revision="bb802661af85a45a892896feac598774d50f8365" />
 
-  <project path="development" name="platform/development" revision="d4b099d3fa79cf102a033ce4fa0b4952afad3fbf" />
+  <project path="development" name="platform/development" revision="62ce42ad0a15370ac71c411f3803dfcb40125614" />
 
   <project path="external/abseil-cpp" name="platform/external/abseil-cpp" revision="3465004edbe6af3357185093fbf16830afe5c1a9" />
 
@@ -89,7 +89,7 @@
 
   <project path="external/jsoncpp" name="platform/external/jsoncpp" revision="51fd5436a52846f49fc68197a55304025e86f25b" />
 
-  <project path="external/kythe" name="platform/external/kythe" revision="eb4007fb786ad76866c3477ed45bdcd7d13ad074" />
+  <project path="external/kythe" name="platform/external/kythe" revision="38b9291832d3c134bade2b60ada288d0f3814719" />
 
   <project path="external/libcxx" name="platform/external/libcxx" revision="978cfa2e7a69773d8aa82c90bcfb9c68f1ad4332" />
 
@@ -117,7 +117,7 @@
 
   <project path="external/zopfli" name="platform/external/zopfli" revision="2999cd7058e3a1fd596e9f00b17d35eebcd46879" />
 
-  <project path="system/core" name="platform/system/core" revision="e8e5b5bb28a80cdfd296fe86f38dd7b089ef1f30" />
+  <project path="system/core" name="platform/system/core" revision="4bf3c13dc5438e88f22c03eb271bdf26c95bd35e" />
 
   <project path="system/libbase" name="platform/system/libbase" revision="a0eec0eea8f9163f2eacee8ca702fe737f6c5a0e" />
 
