@@ -5,7 +5,7 @@
 
   <default revision="master" remote="aosp" sync-j="4" />
 
-  <project path="build/make" name="platform/build" revision="7aad536922061e127ade0def733b36d66f844fa2">
+  <project path="build/make" name="platform/build" revision="90195c958d317a6bd044d62be4a1c71b4f6e93cd">
     <linkfile dest="build/tools" src="tools" />
 </project>
 
@@ -13,7 +13,7 @@
 
   <project path="build/kati" name="platform/build/kati" revision="a6fd9e68b5a25b8c5726e2f653f5af47ef9087bf" />
 
-  <project path="build/soong" name="platform/build/soong" revision="3dca115ddad7c32cd41afc63d0527f7559708278">
+  <project path="build/soong" name="platform/build/soong" revision="bda5850a7133b17105e314486b4a1b85f232b18a">
     <linkfile dest="Android.bp" src="root.bp" />
 
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
@@ -23,9 +23,9 @@
 
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" revision="0295ecbfb15c97e0890d646b3f710d23b7dfb02a" />
 
-  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="3" revision="e1c4a83baf2eaffb055632fef662004203433b9a" />
+  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="3" revision="c2a23f0e6ac65969f41ed498fa0c2d00f731e934" />
 
-  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="linux" clone-depth="1" revision="65749f667e6a2dfc004c1fa6c7b04d92d295c559" />
+  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="linux" clone-depth="1" revision="16ee0c09d1fbf053e67aacd329112b68b92f8681" />
 
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" clone-depth="1" revision="e089f0d72820a43be332be964643b83a32e4b1a7" />
 
@@ -37,7 +37,7 @@
 
   <project path="prebuilts/rust" name="platform/prebuilts/rust" clone-depth="1" revision="8d72891d8b7777368d35b906ec4131479ea54d96" />
 
-  <project path="prebuilts/clang/host/darwin-x86" name="platform/prebuilts/clang/host/darwin-x86" groups="darwin" clone-depth="1" revision="bbf436cb7ace3c568e00afb4d296f0f0072391c6" />
+  <project path="prebuilts/clang/host/darwin-x86" name="platform/prebuilts/clang/host/darwin-x86" groups="darwin" clone-depth="1" revision="79fc2b6c8fcff01fb51eb309fd81dbc90f4f158e" />
 
   <project path="prebuilts/gcc/darwin-x86/host/headers" name="platform/prebuilts/gcc/darwin-x86/host/headers" groups="darwin" clone-depth="1" revision="4ac4f7cc41cf3c9e36fc3d6cf37fd1cfa9587a68" />
 
@@ -53,13 +53,13 @@
 
   <project path="prebuilts/jdk/jdk9" name="platform/prebuilts/jdk/jdk9" clone-depth="1" revision="1f0b937930e83b0f7470b9555ad289153072882f" />
 
-  <project path="prebuilts/misc" name="platform/prebuilts/misc" clone-depth="1" revision="c43649e7548e1054a4f999bfe4aab34ec2fbc8ee" />
+  <project path="prebuilts/misc" name="platform/prebuilts/misc" clone-depth="1" revision="c9046ddecb6752b728648f39042ffd366039b1ca" />
 
-  <project path="bionic" name="platform/bionic" revision="44742701c9e91b628f4802b7f4f53248ad0bb3b9" />
+  <project path="bionic" name="platform/bionic" revision="72f572185f42d1e591d6ba88c5b9b19155fa0bb9" />
 
-  <project path="development" name="platform/development" revision="a008152637afbef4ab0a054c69c70d919b070e0e" />
+  <project path="development" name="platform/development" revision="dafc6d0793a8833c988606b8da32162f6b99e757" />
 
-  <project path="external/abseil-cpp" name="platform/external/abseil-cpp" revision="71a68520a63a5bae1b6bee6f0b79184ffa1aa99f" />
+  <project path="external/abseil-cpp" name="platform/external/abseil-cpp" revision="52df81ed9f28b4a5bee9d3917eb98d1b9ab3a834" />
 
   <project path="external/boringssl" name="platform/external/boringssl" groups="pdk" revision="9e823cb276b40725be41b5f683ee59b942c0d169" />
 
@@ -91,7 +91,7 @@
 
   <project path="external/jsoncpp" name="platform/external/jsoncpp" revision="22d33955e4c2525e659f729c9f02afe09183b107" />
 
-  <project path="external/kythe" name="platform/external/kythe" revision="ec3c03c56ef345b4dc379d6d6f8913cfd1d78e3d" />
+  <project path="external/kythe" name="platform/external/kythe" revision="dfc66006911a14453cdebf7d8782560726bf6aa7" />
 
   <project path="external/libcxx" name="platform/external/libcxx" revision="fe75d5e6ebb70c906ac91ff8d55d4dcfa1d8e100" />
 
@@ -103,7 +103,7 @@
 
   <project path="external/llvm" name="platform/external/llvm" revision="07ef32e13a536510cbbb6090cfbe15f49a91b0f2" />
 
-  <project path="external/protobuf" name="platform/external/protobuf" revision="d064625f703028feecfdbd6bb916ce1bf3b6b9e8" />
+  <project path="external/protobuf" name="platform/external/protobuf" revision="e49b1e15d48a6c8918af35134aa02136104b7a25" />
 
   <project path="external/python/cpython2" name="platform/external/python/cpython2" revision="f9567734433a32ee2ed7d2a61ad4a1e315e04154" />
 
@@ -115,15 +115,15 @@
 
   <project path="external/starlark-go" name="platform/external/starlark-go" revision="312f9e324bdf0bde540b9a64d05ce0db85180478" />
 
-  <project path="external/zlib" name="platform/external/zlib" revision="e3455e1e066be90c1812ccb1ad76f60b6624a118" />
+  <project path="external/zlib" name="platform/external/zlib" revision="dfda8bfaae92d160e942516c2afcc6f26582f9a7" />
 
   <project path="external/zopfli" name="platform/external/zopfli" revision="15fdf31c61251f3e5aa3b188df2770eb153b9484" />
 
-  <project path="system/core" name="platform/system/core" revision="10b691284c8339c9d82d31ff5af3c01ef9ca965f" />
+  <project path="system/core" name="platform/system/core" revision="44e21ec3528ce6b0e3eadd2538cf49bf93a22e1c" />
 
   <project path="system/libbase" name="platform/system/libbase" revision="55f3f005930249a1031e6aa5ccb84e47f5a84c8b" />
 
-  <project path="system/logging" name="platform/system/logging" revision="f5ce1fe0af482c724d18b0971475f971188ea09d" />
+  <project path="system/logging" name="platform/system/logging" revision="1a94375a953d64f10f051ac9de468b9883ac2a0c" />
 
   <project path="system/libziparchive" name="platform/system/libziparchive" revision="814471fce5d4de29c3717ca26d92bd74712efc1a" />
 
@@ -139,7 +139,7 @@
 
   <project path="external/rust/crates/clang-sys" name="platform/external/rust/crates/clang-sys" revision="ab8217957e81ebdbfea64b9f26790508bc7f8fdf" />
 
-  <project path="external/rust/crates/clap" name="platform/external/rust/crates/clap" revision="03e005d91d9db060140f1b12243c79e59eb598f3" />
+  <project path="external/rust/crates/clap" name="platform/external/rust/crates/clap" revision="378471649a2ed11aecc139e3cca33df47693c544" />
 
   <project path="external/rust/crates/either" name="platform/external/rust/crates/either" revision="5d1ca2c6eca40ede3de483ec1278f7e6ea39247a" />
 
