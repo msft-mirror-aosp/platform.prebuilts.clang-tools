@@ -25,7 +25,7 @@ extern "C" {
 #pragma clang riscv intrinsic vector
 
 
-#define vlenb() __builtin_rvv_vlenb()
+#define __riscv_vlenb() __builtin_rvv_vlenb()
 
 enum RVV_CSR {
   RVV_VSTART = 0,
@@ -35,7 +35,7 @@ enum RVV_CSR {
 };
 
 static __inline__ __attribute__((__always_inline__, __nodebug__))
-unsigned long vread_csr(enum RVV_CSR __csr) {
+unsigned long __riscv_vread_csr(enum RVV_CSR __csr) {
   unsigned long __rv = 0;
   switch (__csr) {
     case RVV_VSTART:
@@ -55,7 +55,7 @@ unsigned long vread_csr(enum RVV_CSR __csr) {
 }
 
 static __inline__ __attribute__((__always_inline__, __nodebug__))
-void vwrite_csr(enum RVV_CSR __csr, unsigned long __value) {
+void __riscv_vwrite_csr(enum RVV_CSR __csr, unsigned long __value) {
   switch (__csr) {
     case RVV_VSTART:
       __asm__ __volatile__ ("csrw\tvstart, %z0" : : "rJ"(__value) : "memory");
@@ -72,62 +72,62 @@ void vwrite_csr(enum RVV_CSR __csr, unsigned long __value) {
   }
 }
 
-#define vsetvl_e8mf4(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 6)
-#define vsetvl_e8mf2(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 7)
-#define vsetvl_e8m1(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 0)
-#define vsetvl_e8m2(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 1)
-#define vsetvl_e8m4(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 2)
-#define vsetvl_e8m8(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 3)
+#define __riscv_vsetvl_e8mf4(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 6)
+#define __riscv_vsetvl_e8mf2(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 7)
+#define __riscv_vsetvl_e8m1(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 0)
+#define __riscv_vsetvl_e8m2(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 1)
+#define __riscv_vsetvl_e8m4(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 2)
+#define __riscv_vsetvl_e8m8(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 3)
 
-#define vsetvl_e16mf2(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 7)
-#define vsetvl_e16m1(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 0)
-#define vsetvl_e16m2(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 1)
-#define vsetvl_e16m4(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 2)
-#define vsetvl_e16m8(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 3)
+#define __riscv_vsetvl_e16mf2(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 7)
+#define __riscv_vsetvl_e16m1(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 0)
+#define __riscv_vsetvl_e16m2(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 1)
+#define __riscv_vsetvl_e16m4(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 2)
+#define __riscv_vsetvl_e16m8(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 3)
 
-#define vsetvl_e32m1(avl) __builtin_rvv_vsetvli((size_t)(avl), 2, 0)
-#define vsetvl_e32m2(avl) __builtin_rvv_vsetvli((size_t)(avl), 2, 1)
-#define vsetvl_e32m4(avl) __builtin_rvv_vsetvli((size_t)(avl), 2, 2)
-#define vsetvl_e32m8(avl) __builtin_rvv_vsetvli((size_t)(avl), 2, 3)
+#define __riscv_vsetvl_e32m1(avl) __builtin_rvv_vsetvli((size_t)(avl), 2, 0)
+#define __riscv_vsetvl_e32m2(avl) __builtin_rvv_vsetvli((size_t)(avl), 2, 1)
+#define __riscv_vsetvl_e32m4(avl) __builtin_rvv_vsetvli((size_t)(avl), 2, 2)
+#define __riscv_vsetvl_e32m8(avl) __builtin_rvv_vsetvli((size_t)(avl), 2, 3)
 
 #if __riscv_v_elen >= 64
-#define vsetvl_e8mf8(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 5)
-#define vsetvl_e16mf4(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 6)
-#define vsetvl_e32mf2(avl) __builtin_rvv_vsetvli((size_t)(avl), 2, 7)
+#define __riscv_vsetvl_e8mf8(avl) __builtin_rvv_vsetvli((size_t)(avl), 0, 5)
+#define __riscv_vsetvl_e16mf4(avl) __builtin_rvv_vsetvli((size_t)(avl), 1, 6)
+#define __riscv_vsetvl_e32mf2(avl) __builtin_rvv_vsetvli((size_t)(avl), 2, 7)
 
-#define vsetvl_e64m1(avl) __builtin_rvv_vsetvli((size_t)(avl), 3, 0)
-#define vsetvl_e64m2(avl) __builtin_rvv_vsetvli((size_t)(avl), 3, 1)
-#define vsetvl_e64m4(avl) __builtin_rvv_vsetvli((size_t)(avl), 3, 2)
-#define vsetvl_e64m8(avl) __builtin_rvv_vsetvli((size_t)(avl), 3, 3)
+#define __riscv_vsetvl_e64m1(avl) __builtin_rvv_vsetvli((size_t)(avl), 3, 0)
+#define __riscv_vsetvl_e64m2(avl) __builtin_rvv_vsetvli((size_t)(avl), 3, 1)
+#define __riscv_vsetvl_e64m4(avl) __builtin_rvv_vsetvli((size_t)(avl), 3, 2)
+#define __riscv_vsetvl_e64m8(avl) __builtin_rvv_vsetvli((size_t)(avl), 3, 3)
 #endif
 
-#define vsetvlmax_e8mf4() __builtin_rvv_vsetvlimax(0, 6)
-#define vsetvlmax_e8mf2() __builtin_rvv_vsetvlimax(0, 7)
-#define vsetvlmax_e8m1() __builtin_rvv_vsetvlimax(0, 0)
-#define vsetvlmax_e8m2() __builtin_rvv_vsetvlimax(0, 1)
-#define vsetvlmax_e8m4() __builtin_rvv_vsetvlimax(0, 2)
-#define vsetvlmax_e8m8() __builtin_rvv_vsetvlimax(0, 3)
+#define __riscv_vsetvlmax_e8mf4() __builtin_rvv_vsetvlimax(0, 6)
+#define __riscv_vsetvlmax_e8mf2() __builtin_rvv_vsetvlimax(0, 7)
+#define __riscv_vsetvlmax_e8m1() __builtin_rvv_vsetvlimax(0, 0)
+#define __riscv_vsetvlmax_e8m2() __builtin_rvv_vsetvlimax(0, 1)
+#define __riscv_vsetvlmax_e8m4() __builtin_rvv_vsetvlimax(0, 2)
+#define __riscv_vsetvlmax_e8m8() __builtin_rvv_vsetvlimax(0, 3)
 
-#define vsetvlmax_e16mf2() __builtin_rvv_vsetvlimax(1, 7)
-#define vsetvlmax_e16m1() __builtin_rvv_vsetvlimax(1, 0)
-#define vsetvlmax_e16m2() __builtin_rvv_vsetvlimax(1, 1)
-#define vsetvlmax_e16m4() __builtin_rvv_vsetvlimax(1, 2)
-#define vsetvlmax_e16m8() __builtin_rvv_vsetvlimax(1, 3)
+#define __riscv_vsetvlmax_e16mf2() __builtin_rvv_vsetvlimax(1, 7)
+#define __riscv_vsetvlmax_e16m1() __builtin_rvv_vsetvlimax(1, 0)
+#define __riscv_vsetvlmax_e16m2() __builtin_rvv_vsetvlimax(1, 1)
+#define __riscv_vsetvlmax_e16m4() __builtin_rvv_vsetvlimax(1, 2)
+#define __riscv_vsetvlmax_e16m8() __builtin_rvv_vsetvlimax(1, 3)
 
-#define vsetvlmax_e32m1() __builtin_rvv_vsetvlimax(2, 0)
-#define vsetvlmax_e32m2() __builtin_rvv_vsetvlimax(2, 1)
-#define vsetvlmax_e32m4() __builtin_rvv_vsetvlimax(2, 2)
-#define vsetvlmax_e32m8() __builtin_rvv_vsetvlimax(2, 3)
+#define __riscv_vsetvlmax_e32m1() __builtin_rvv_vsetvlimax(2, 0)
+#define __riscv_vsetvlmax_e32m2() __builtin_rvv_vsetvlimax(2, 1)
+#define __riscv_vsetvlmax_e32m4() __builtin_rvv_vsetvlimax(2, 2)
+#define __riscv_vsetvlmax_e32m8() __builtin_rvv_vsetvlimax(2, 3)
 
 #if __riscv_v_elen >= 64
-#define vsetvlmax_e8mf8() __builtin_rvv_vsetvlimax(0, 5)
-#define vsetvlmax_e16mf4() __builtin_rvv_vsetvlimax(1, 6)
-#define vsetvlmax_e32mf2() __builtin_rvv_vsetvlimax(2, 7)
+#define __riscv_vsetvlmax_e8mf8() __builtin_rvv_vsetvlimax(0, 5)
+#define __riscv_vsetvlmax_e16mf4() __builtin_rvv_vsetvlimax(1, 6)
+#define __riscv_vsetvlmax_e32mf2() __builtin_rvv_vsetvlimax(2, 7)
 
-#define vsetvlmax_e64m1() __builtin_rvv_vsetvlimax(3, 0)
-#define vsetvlmax_e64m2() __builtin_rvv_vsetvlimax(3, 1)
-#define vsetvlmax_e64m4() __builtin_rvv_vsetvlimax(3, 2)
-#define vsetvlmax_e64m8() __builtin_rvv_vsetvlimax(3, 3)
+#define __riscv_vsetvlmax_e64m1() __builtin_rvv_vsetvlimax(3, 0)
+#define __riscv_vsetvlmax_e64m2() __builtin_rvv_vsetvlimax(3, 1)
+#define __riscv_vsetvlmax_e64m4() __builtin_rvv_vsetvlimax(3, 2)
+#define __riscv_vsetvlmax_e64m8() __builtin_rvv_vsetvlimax(3, 3)
 #endif
 
 typedef __rvv_bool64_t vbool64_t;
@@ -181,28 +181,21 @@ typedef __rvv_int64m4_t vint64m4_t;
 typedef __rvv_uint64m4_t vuint64m4_t;
 typedef __rvv_int64m8_t vint64m8_t;
 typedef __rvv_uint64m8_t vuint64m8_t;
-#if defined(__riscv_zvfh)
 typedef __rvv_float16mf4_t vfloat16mf4_t;
 typedef __rvv_float16mf2_t vfloat16mf2_t;
 typedef __rvv_float16m1_t vfloat16m1_t;
 typedef __rvv_float16m2_t vfloat16m2_t;
 typedef __rvv_float16m4_t vfloat16m4_t;
 typedef __rvv_float16m8_t vfloat16m8_t;
-#endif
-#if (__riscv_v_elen_fp >= 32)
 typedef __rvv_float32mf2_t vfloat32mf2_t;
 typedef __rvv_float32m1_t vfloat32m1_t;
 typedef __rvv_float32m2_t vfloat32m2_t;
 typedef __rvv_float32m4_t vfloat32m4_t;
 typedef __rvv_float32m8_t vfloat32m8_t;
-#endif
-#if (__riscv_v_elen_fp >= 64)
 typedef __rvv_float64m1_t vfloat64m1_t;
 typedef __rvv_float64m2_t vfloat64m2_t;
 typedef __rvv_float64m4_t vfloat64m4_t;
 typedef __rvv_float64m8_t vfloat64m8_t;
-#endif
-
 #define __riscv_v_intrinsic_overloading 1
 
 #ifdef __cplusplus
