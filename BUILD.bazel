@@ -13,8 +13,8 @@ package(default_visibility = ["//visibility:public"])
 sh_binary(
     name = "versioner",
     srcs = select({
-        "//build/bazel/platforms/os:linux": [":linux-x86/bin/versioner"],
-        "//build/bazel/platforms/os:darwin": [":darwin-x86/bin/versioner"],
+        "//build/bazel_common_rules/platforms/os:linux": [":linux-x86/bin/versioner"],
+        "//build/bazel_common_rules/platforms/os:darwin": [":darwin-x86/bin/versioner"],
         "//conditions:default": ["@platform//:incompatible"],
     }),
     data = [":clang-tools.runfiles"],
@@ -29,8 +29,8 @@ sh_binary(
 filegroup(
     name = "clang-tools.runfiles",
     srcs = select({
-        "//build/bazel/platforms/os:linux": glob([":linux-x86/lib64/**/*"]),
-        "//build/bazel/platforms/os:darwin": glob([":darwin-x86/lib64/**/*"]),
+        "//build/bazel_common_rules/platforms/os:linux": glob([":linux-x86/lib64/**/*"]),
+        "//build/bazel_common_rules/platforms/os:darwin": glob([":darwin-x86/lib64/**/*"]),
         "//conditions:default": ["@platform//:incompatible"],
     }),
 )
