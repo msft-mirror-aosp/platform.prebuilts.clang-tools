@@ -2,12 +2,15 @@ package(default_visibility = ["//visibility:public"])
 
 [filegroup(
     name = platform,
-    srcs = glob([
-        "%s/bin/*" % platform,
-        "%s/lib/*" % platform,
-        "%s/lib64/*" % platform,
-        "%s/clang-headers/*" % platform,
-    ]),
+    srcs = glob(
+        [
+            "%s/bin/*" % platform,
+            "%s/lib/*" % platform,
+            "%s/lib64/*" % platform,
+            "%s/clang-headers/*" % platform,
+        ],
+        allow_empty = True,
+    ),
 ) for platform in ("linux-x86", "darwin-x86")]
 
 sh_binary(
@@ -29,8 +32,14 @@ sh_binary(
 filegroup(
     name = "clang-tools.runfiles",
     srcs = select({
-        "//build/bazel_common_rules/platforms/os:linux": glob([":linux-x86/lib64/**/*"]),
-        "//build/bazel_common_rules/platforms/os:darwin": glob([":darwin-x86/lib64/**/*"]),
+        "//build/bazel_common_rules/platforms/os:linux": glob(
+            [":linux-x86/lib64/**/*"],
+            allow_empty = True,
+        ),
+        "//build/bazel_common_rules/platforms/os:darwin": glob(
+            [":darwin-x86/lib64/**/*"],
+            allow_empty = True,
+        ),
         "//conditions:default": ["@platform//:incompatible"],
     }),
 )
