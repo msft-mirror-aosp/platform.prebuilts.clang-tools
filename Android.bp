@@ -1,0 +1,5 @@
+dirgroup {
+    name: "trusty_dirgroup_prebuilts_clang-tools",
+    dirs: ["."],
+    visibility: ["//trusty/vendor/google/aosp/scripts"],
+}
