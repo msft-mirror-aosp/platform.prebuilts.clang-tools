@@ -13,7 +13,7 @@
 
   <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" groups="pdk" revision="605c838fdb45a6d89ff132310faea0fe63abe7d3" />
 
-  <project path="build/make" name="platform/build" revision="fbcc6337c78b3c486d085d75b277647dc72c352d">
+  <project path="build/make" name="platform/build" revision="32ecb93ace0954a63362135d196a3dd5f82cffb9">
     <linkfile dest="build/tools" src="tools" />
 </project>
 
@@ -21,7 +21,7 @@
 
   <project path="build/kati" name="platform/build/kati" revision="74af332b81f7b5d631b6b7ffdb870b6340324389" />
 
-  <project path="build/soong" name="platform/build/soong" revision="e98f706c29d7f54c36371ca1b5a3636876dfbf20">
+  <project path="build/soong" name="platform/build/soong" revision="da481ebb2866117f03278654e0aed4dd8362f6bc">
     <linkfile dest="Android.bp" src="root.bp" />
 
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
@@ -49,7 +49,7 @@
 
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" revision="2b1a1612c5478588ab1adb3534138117ff945ccc" />
 
-  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="3" revision="e6ad57f2600314fda00055b456c00df26837c0fb" />
+  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="3" revision="2d34374c99a3057f8a9cc8d9ef3537fa7bef2cd1" />
 
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="linux" clone-depth="1" revision="2fa77dca376be7be1e51b89fb2e23c792cd6286b" />
 
@@ -83,7 +83,7 @@
 
   <project path="bionic" name="platform/bionic" revision="296bd992b7918dcf27a1d67d16edeccececa0887" />
 
-  <project path="development" name="platform/development" revision="c65568614c9975fbd7b89908976e6a5f13291bbf" />
+  <project path="development" name="platform/development" revision="8531a87ce0dc24f6b9ecfd261b6f1c4c8bc8f925" />
 
   <project path="external/abseil-cpp" name="platform/external/abseil-cpp" revision="5bcfe68ed57d4507f6ccc037e588e8ca779f4088" />
 
