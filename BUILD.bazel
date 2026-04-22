@@ -1,3 +1,4 @@
+load("@bazel_skylib//rules:native_binary.bzl", "native_binary")
 load("@rules_shell//shell:sh_binary.bzl", "sh_binary")
 
 package(default_visibility = ["//visibility:public"])
@@ -23,6 +24,20 @@ sh_binary(
         "//conditions:default": ["@platform//:incompatible"],
     }),
     data = [":clang-tools.runfiles"],
+)
+
+native_binary(
+    name = "bindgen",
+    src = select({
+        "@platforms//os:linux": "linux-x86/bin/bindgen",
+        "//conditions:default": "@platform//:incompatible",
+    }),
+    out = "bindgen",
+    data = glob([
+        "linux-x86/lib/*",
+        "linux-x86/lib64/*",
+    ]),
+    visibility = ["//build/kernel:__subpackages__"],
 )
 
 # Runfiles (e.g. shared libraries) required by clang tools like versioner.
