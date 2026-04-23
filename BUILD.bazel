@@ -28,15 +28,16 @@ sh_binary(
 
 native_binary(
     name = "bindgen",
-    src = select({
-        "@platforms//os:linux": "linux-x86/bin/bindgen",
-        "//conditions:default": "@platform//:incompatible",
-    }),
+    src = "linux-x86/bin/bindgen",
     out = "bindgen",
     data = glob([
         "linux-x86/lib/*",
         "linux-x86/lib64/*",
     ]),
+    target_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
     visibility = ["//build/kernel:__subpackages__"],
 )
 
